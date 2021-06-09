@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Swinrex
+- 👋 Hi, I’m Waleed Abu Alkhayr
 - 👀 I’m interested in game dev
 - 🌱 I’m currently learning Unity Engine
 - 💞️ I’m looking to collaborate on anything that relates to these topics 
