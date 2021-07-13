@@ -13,3 +13,22 @@ public class Program
 		return result;
 	}
 }
+
+
+
+
+*/using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	 Console.WriteLine(ConvertMyDataType(152.96));
+	}
+	
+	public static int ConvertMyDataType(double num)
+	{
+		int result = (int)num;
+		return result;
+	}
+}*/
