@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Preparing new record to be stored in our Dictionary!");
+		
+		//random object to generate numbers and password
+		Random random = new Random();
+		
+		// for generate random numbers from 0 to 1000
+		int genNum = random.Next(0,1000);
+		String genNumString = "" + genNum;
+		//Console.WriteLine(genNumString);
+		
+		// for generate random password
+		var chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+        var stringChars = new char[8];
+
+        for (int i = 0; i < stringChars.Length; i++)
+        {
+           stringChars[i] = chars[random.Next(chars.Length)];
+        }
+		
+		string passX = new string(stringChars);
+		//Console.WriteLine(stringChars);
+		
+		// for assure that random numbers is even or odd
+		string state;
+		if (genNum % 2 == 0) 
+		{
+			state = "even";
+			//Console.WriteLine(ev2);
+		}
+		
+		else
+		{    state = "odd";
+			//Console.WriteLine(od1);
+		}
+		
+		//now create dictionary for ID Number
+		Dictionary <string, string> IDRandom = new Dictionary <string, string>();
+		IDRandom.Add("ID" + genNumString, ""+genNumString);
+		//IDRandom.Add("ID" + genNumString, ""+genNumString);
+		
+		foreach(KeyValuePair<string, string> entry in IDRandom)
+			{
+			Console.WriteLine(entry.Key + ": " + entry.Value);
+		    }
+		
+		//now create dictionary for username
+		Dictionary <string, string> IDUsername = new Dictionary <string, string>();
+		IDUsername.Add("username" + genNumString, "Michael");
+		//IDUsername.Add("username" + IDRandom, "Mohammed");
+		
+		foreach(KeyValuePair<string, string> entry in IDUsername)
+			{
+			Console.WriteLine(entry.Key + ": " + entry.Value);
+		    }
+		
+		//now create dictionary for password
+		Dictionary <string, string> passwordNum = new Dictionary <string, string>();
+		passwordNum.Add("password" + genNumString, passX);
+		//passwordNum.Add("password" + stringChars, ""+stringChars);
+		
+		foreach(KeyValuePair<string, string> entry in passwordNum)
+			{
+			Console.WriteLine(entry.Key + ": " + entry.Value);
+		    }
+		
+		//now create dictionary for Category even or odd
+		Dictionary <string, string> IDCategory = new Dictionary <string, string>();
+		IDCategory.Add("Category" + genNumString, state);
+		//IDCategory.Add("Category" + IDRandom, state);
+		
+		foreach(KeyValuePair<string, string> entry in IDCategory)
+			{
+			Console.WriteLine(entry.Key + ": " + entry.Value);
+		    }
+    }
+}
