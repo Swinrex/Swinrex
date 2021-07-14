@@ -1,0 +1,100 @@
+using System;
+using System.Collections.Generic;
+
+public class GameObject
+{
+	public int id;
+	public bool isActive;
+	public string name;
+	public List<string> components = new List<string>();
+
+	public void CreateComponent() //Takes one parameter of type string and Inserts the passed parameter name into the class's component list.
+	{
+		components.Add(this.name);
+	}
+
+	public void PrintAllComponents()//Prints the content of the components list
+	{
+		Console.WriteLine(components);
+	}
+
+	public void GetComponent()//Takes one parameter of type string representing the component name to check for, returns true if the component found inside the class's component list, otherwise false.
+	{
+       this.isActive = true;
+	}
+
+	public virtual string GetName()//Returns the object's name (virtual method)
+	{
+		return this.name;
+	}
+
+	public void SetName(string name)//Takes one parameter of type string and sets the name property.
+	{
+        this.name = name;
+	}
+
+	public void SetIsActive()//Takes one parameter of type bool and sets the isActive property.
+	{
+		if (this.isActive == true)
+		{
+			Console.WriteLine("The state of proprty is Active");
+		}
+
+		else
+		{
+			Console.WriteLine("The state of proprty is not Active");
+		}
+	}
+}
+    
+public class Transform : GameObject//Transform Class inherits GameObject Class
+	{
+		public int positionX;
+		public int positionY;
+
+		public void Translate() //Increase the value of positionX and positionY by 1.
+		{
+			positionX++;
+			positionY++;
+		}
+
+		public int GetXPosition() //Returns positionX value.
+		{
+			return this.positionX;
+		}
+
+		public int GetYPosition() //Returns positionY value.
+		{
+			return this.positionY;
+		}
+    
+		public override string GetName() //Returns string with the word "I am a Transform".
+		{
+			return this.name + " I am a Transform";
+		}
+
+	}
+
+
+public class Program
+{
+	public static void Main()
+	{
+		//Create an instance of the GameObject class and use all the methods you implemented in the class, substitute values you see fit to make your methods work.
+		GameObject game01 = new GameObject();
+		
+		//game01.components();
+		game01.PrintAllComponents();
+		game01.GetComponent();
+		game01.GetName();
+        game01.SetName("Eddy");
+		game01.SetIsActive();
+		
+		//Create an instance of the Transform class, use all methods implemented as well. Make sure that GetName() method returns "I am a Transform".
+		GameObject game11 = new Transform();
+		
+     	//game11.GetXPosition();
+		//game11.GetYPosition();
+		game11.GetName();
+	}
+}
