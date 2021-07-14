@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+	public static void Main()
+	{
+		/*Write a C# Sharp program to create a list of integers where each integer value is multiplied by 5. 
+        Print out the list items after the multiplication.*/
+		
+		List<int> multiNumbers = new List<int>();
+        multiNumbers.Add(11); // adding elements using add() method
+        multiNumbers.Add(6);
+        multiNumbers.Add(10);
+        multiNumbers.Add(2);
+		multiNumbers.Add(0);
+		
+	for(int i = 0; i < multiNumbers.Count; i++)
+	{
+    Console.WriteLine("the mult by 5 result is " + multiNumbers[i] +" :" + multiNumbers[i]*5);
+    }
+	
+   }	
+}
