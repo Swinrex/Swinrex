@@ -3,7 +3,7 @@
 - 🌱 I’m currently learning Unity Engine
 - 💞️ I’m looking to collaborate on anything that relates to these topics 
 - 📫 How to reach me, just write @swinrex in Telegram, Twitter and Instagram
-- ==========================================================================
+- ==================================================
 -  I grew up in a learning environment. My parents motivated me and my educated brothers and sisters to pursue education and development.
 
 -  I'm a Computer Engineer, interested in game development, AI, and content creator, and I skilled Unity for my work with experience in C# scripting. 
